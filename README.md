@@ -1,6 +1,6 @@
 # JavaLambda
 
-Resumé Nouveautés Java 8 et 7 (date) 
+Resumé Nouveautés Java 8 et 7 (Collection, Stream, date and Time) 
  
 Exemples avec "sans ou avec" 
 Kotlin 
