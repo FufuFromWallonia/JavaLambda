@@ -1,1 +1,4 @@
 code/target/
+slides/asciidoctorj-*
+slides/*.html
+*.swp

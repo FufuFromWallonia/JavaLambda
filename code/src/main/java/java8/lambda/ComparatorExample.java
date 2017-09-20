@@ -20,7 +20,8 @@ public class ComparatorExample {
 
     public void comparatorUsingLambda() {
 	// tag::comparatorLambda[]
-        Comparator<String> comparator = (String s1, String s2) -> Integer.compare(s1.length(), s2.length());
+        Comparator<String> comparator = (String s1, String s2)
+	       	-> Integer.compare(s1.length(), s2.length());
         
 	String[] strings = {"Alain", "Benjamin"};
         Arrays.sort(strings, comparator);
