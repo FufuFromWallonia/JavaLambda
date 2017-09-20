@@ -1,0 +1,68 @@
+:source-highlighter: coderay
+:revealjs_transition: fade
+:revealjs_theme: solarized
+:revealjs_history: true
+:revealjs_center: false
+
+= Java 8, la version avant Java 9 ;)
+Partiellement inspiré par NinjaSquad :)
+
+== !
+
+Qui utilise *Java5* ?
+
+== !
+
+Qui utilise *Java6* ?
+
+== !
+
+Qui utilise *Java7* ?
+
+== !
+
+[quote, No one - ever]
+____
+Java7 a changé ma façon de développer!
+____
+
+[NOTE.speaker]
+--
+Qu'y a-t-il eu de nouveau dans Java 7?
+Quelques APIs: nio2, quelques ajouts dans concurrency, JDBC 4.1...
+Mais au quotidien, qu'est-ce qui a changé?
+--
+
+== LES (EXPRESSIONS) LAMBDAS
+
+== Comparator 1/2
+
+.Comparator avec une classe anonyme
+[source,java]
+----
+include::../code/src/main/java/java8/lambda/ComparatorExample.java[tag=comparatorAnonymous]
+----
+
+== Comparator 2/2
+
+.Comparator avec une expression lambda
+[source,java]
+----
+include::../code/src/main/java/java8/lambda/ComparatorExample.java[tag=comparatorLambda]
+----
+
+== Runnable 1/2
+
+.Runnable avec une classe anonyme
+[source,java]
+----
+include::../code/src/main/java/java8/lambda/RunnableExample.java[tag=runnableAnonymous]
+----
+
+== Runnable 2/2
+
+.Runnable avec une expression lambda
+[source,java]
+----
+include::../code/src/main/java/java8/lambda/RunnableExample.java[tag=runnableLambda]
+----
