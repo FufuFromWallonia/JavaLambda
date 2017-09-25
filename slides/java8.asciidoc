@@ -33,12 +33,56 @@ Quelques APIs: nio2, quelques ajouts dans concurrency, JDBC 4.1...
 Mais au quotidien, qu'est-ce qui a changé?
 --
 
+== LA METHODE FOREACH
+
+== foreach() 1/2
+
+.Traversal avec un Iterator
+[source,java,indent=0]
+----
+include::../code/src/main/java/java8/foreach/TraversalExample.java[tag=traversalIterator]
+----
+
+== foreach() 2/2
+
+.Traversal avec la méthode foreach()
+[source,java,indent=0]
+----
+include::../code/src/main/java/java8/foreach/TraversalExample.java[tag=traversalForeach]
+----
+
+== LES DEFAULT METHODS
+
+== Augmenter une interface
+
+.Comportements par défaut
+[source,java,indent=0]
+----
+include::../code/src/main/java/java8/defmethod/DefaultMethodExample.java[tag=orderableDefaultMethods]
+----
+
+== Implémenter l'interface
+
+.Bénéficier des comportements par défaut
+[source,java,indent=0]
+----
+include::../code/src/main/java/java8/defmethod/DefaultMethodExample.java[tag=orderableImplemented]
+----
+
+== Vérifier le comportement
+
+.Orderable in action
+[source,java,indent=0]
+----
+include::../code/src/main/java/java8/defmethod/DefaultMethodExample.java[tag=orderableInAction]
+----
+
 == LES (EXPRESSIONS) LAMBDAS
 
 == Comparator 1/2
 
 .Comparator avec une classe anonyme
-[source,java]
+[source,java,indent=0]
 ----
 include::../code/src/main/java/java8/lambda/ComparatorExample.java[tag=comparatorAnonymous]
 ----
@@ -46,7 +90,7 @@ include::../code/src/main/java/java8/lambda/ComparatorExample.java[tag=comparato
 == Comparator 2/2
 
 .Comparator avec une expression lambda
-[source,java]
+[source,java,indent=0]
 ----
 include::../code/src/main/java/java8/lambda/ComparatorExample.java[tag=comparatorLambda]
 ----
@@ -54,7 +98,7 @@ include::../code/src/main/java/java8/lambda/ComparatorExample.java[tag=comparato
 == Runnable 1/2
 
 .Runnable avec une classe anonyme
-[source,java]
+[source,java,indent=0]
 ----
 include::../code/src/main/java/java8/lambda/RunnableExample.java[tag=runnableAnonymous]
 ----
@@ -62,7 +106,36 @@ include::../code/src/main/java/java8/lambda/RunnableExample.java[tag=runnableAno
 == Runnable 2/2
 
 .Runnable avec une expression lambda
-[source,java]
+[source,java,indent=0]
 ----
 include::../code/src/main/java/java8/lambda/RunnableExample.java[tag=runnableLambda]
+----
+
+== Magique
+
+Toute *interface* avec *une seule méthode* peut être utilisée comme expression lambda.
+
+== Souvenez-vous: foreach() 2/2
+
+.Traversal avec la méthode foreach()
+[source,java,indent=0]
+----
+include::../code/src/main/java/java8/foreach/TraversalExample.java[tag=traversalForeach]
+----
+
+== Souvenez-vous: foreach() 2/2
+
+.Traversal avec la méthode foreach()
+[source,java,indent=0]
+----
+include::../code/src/main/java/java8/foreach/TraversalExample.java[tag=traversalForeach]
+----
+Consumer est une *interface* avec *une seule méthode*, une @FunctionalInterface.
+
+== foreach() + Lambda
+
+.Traversal avec la méthode foreach() et une expression Lambda
+[source,java,indent=0]
+----
+include::../code/src/main/java/java8/foreach/TraversalExample.java[tag=traversalForeachLambda]
 ----
