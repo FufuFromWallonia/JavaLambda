@@ -140,31 +140,136 @@ Consumer est une *interface* avec *une seule méthode*, une @FunctionalInterface
 include::../code/src/main/java/java8/foreach/TraversalExample.java[tag=traversalForeachLambda]
 ----
 
+== Exemples d'expressions Lambda 1/2
+
+[source,java,indent=0]
+----
+(int x) -> { return x+1; }
+(int x) -> x+1
+(x) -> x+1
+x -> x+1
+(int x, int y) -> x+y
+(x,y) -> x+y
+(x, int y) -> x+y #FAIL
+----
+
+[NOTE.speaker]
+--
+(int x) -> { return x+1; }   // un seul argument avec déclaration de type
+
+(int x) -> x+1               // même chose mais avec retour implicite
+
+(x) -> x+1                   // même chose avec inférence du type
+
+x -> x+1                     // Parenthèses optionnelles pour un argument unique avec inférence de type
+
+(int x, int y) -> x+y      // Plusieurs arguments avec déclaration de type
+
+(x,y) -> x+y               // Plusieurs arguments avec inférence de type pour tous
+
+(x, int y) -> x+y          // Illégal: impossible de mélanger déclaration et inférence de type
+--
+
+== Exemples d'expressions Lambda 1/2
+
+[source,java,indent=0]
+----
+() -> {}
+() -> { return 42; }
+() -> { System.gc(); }
+() -> 42
+() -> null
+----
+
+[NOTE.speaker]
+--
+() -> {}		     // Pas de paramètres; sans retour (void)
+
+() -> { return 42; }         // Pas de paramètres, le corps est un bloc avec un retour
+
+() -> { System.gc(); }       // Pas de paramètres, le corps est un bloc, sans retour (void)
+
+() -> 42		     // Pas de paramètres, le corps est une expression avec retour implicite
+
+() -> null                   // Pas de paramètres, le corps est une expression avec retour implicite nul
+--
+
 == Toujours trop verbeux?
 
-== Method/Constructor reference 1/2
+== Référence de Méthode/Constructeur 1/2
 
-.Comparator avec une expression lambda
+.Comparator avec des expressions lambda "classiques"
 [source,java,indent=0]
 ----
 include::../code/src/main/java/java8/methodref/MethodReferenceExample.java[tag=comparatorLambda]
 ----
 
-== Method/Constructor reference 1/2
+== Référence de Méthode/Constructeur 2/2
 
-.Comparator avec une expression lambda
-[source,java,indent=0]
-----
-include::../code/src/main/java/java8/methodref/MethodReferenceExample.java[tag=comparatorLambda]
-----
-L'expression lambda prend 2 String en paramètres et les applique sur une méthode.
-On peut donc la  remplacer par une référence de méthode.
-
-== Method/Constructor reference 2/2
-
-.Comparator avec une expression lambda et une référence de méthode
+.Comparator avec des références de méthodes
 [source,java,indent=0]
 ----
 include::../code/src/main/java/java8/methodref/MethodReferenceExample.java[tag=comparatorLambdaMethodReference]
 ----
 
+== Exemples de références de méthodes / constructeurs
+
+[source,java,indent=0]
+----
+System::getProperty
+System.out::println
+"abc"::length
+ArrayList::new
+int[]::new
+----
+
+[NOTE.speaker]
+--
+System::getProperty          // Réference de méthode statique
+
+System.out::println          // Référence de méthode d'instance
+
+"abc"::length                // Référence de méthode sur une expression
+
+ArrayList::new               // Référence de constructeur sur une classe
+
+int[]::new                   // Référence de constructeur sur un tableau
+--
+
+== C'EST CONCIS, MAIS POURQUOI?
+
+== POUR LES STREAMS!!!!!
+
+== java.util.stream 1/2
+
+.Filtrage et somme à l'ancienne avec une boucle
+[source,java,indent=0]
+----
+include::../code/src/main/java/java8/streams/FilterExample.java[tag=filterLoop]
+----
+On filtre les éléments supérieurs à 10 et on les additionne.
+
+== java.util.stream 2/2
+
+.Filtrage et somme à la sauce stream avec stream() filter() et mapTo..()
+[source,java,indent=0]
+----
+include::../code/src/main/java/java8/streams/FilterExample.java[tag=filterStream]
+----
+On filtre les éléments supérieurs à 10 et on les additionne.
+
+== java.util.stream 2/2
+
+.Filtrage et somme à la sauce stream avec stream() filter() et mapTo..()
+[source,java,indent=0]
+----
+include::../code/src/main/java/java8/streams/FilterExample.java[tag=filterStream]
+----
+On filtre les éléments supérieurs à 10 et on les additionne.
+Le paramètre filter() est de type Predicate, et celui de mapTo...() est de type Function.
+Ce sont tous deux des opérations intermédiaires (qui renvoient un stream),
+quand sum() est une opération terminale, (qui ne renvoie pas de stream)
+[NOTE.speaker]
+--
+sum() est une méthode terminale d'IntStream, pas de Stream<Integer> d'où le besoin de mapToInt().
+--
