@@ -111,7 +111,7 @@ include::../code/src/main/java/java8/lambda/RunnableExample.java[tag=runnableAno
 include::../code/src/main/java/java8/lambda/RunnableExample.java[tag=runnableLambda]
 ----
 
-== Magique
+== Magie
 
 Toute *interface* avec *une seule méthode* peut être utilisée comme expression lambda.
 
@@ -139,3 +139,32 @@ Consumer est une *interface* avec *une seule méthode*, une @FunctionalInterface
 ----
 include::../code/src/main/java/java8/foreach/TraversalExample.java[tag=traversalForeachLambda]
 ----
+
+== Toujours trop verbeux?
+
+== Method/Constructor reference 1/2
+
+.Comparator avec une expression lambda
+[source,java,indent=0]
+----
+include::../code/src/main/java/java8/methodref/MethodReferenceExample.java[tag=comparatorLambda]
+----
+
+== Method/Constructor reference 1/2
+
+.Comparator avec une expression lambda
+[source,java,indent=0]
+----
+include::../code/src/main/java/java8/methodref/MethodReferenceExample.java[tag=comparatorLambda]
+----
+L'expression lambda prend 2 String en paramètres et les applique sur une méthode.
+On peut donc la  remplacer par une référence de méthode.
+
+== Method/Constructor reference 2/2
+
+.Comparator avec une expression lambda et une référence de méthode
+[source,java,indent=0]
+----
+include::../code/src/main/java/java8/methodref/MethodReferenceExample.java[tag=comparatorLambdaMethodReference]
+----
+
