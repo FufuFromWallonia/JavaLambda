@@ -97,11 +97,11 @@ include::../code/src/main/java/java8/defmethod/DefaultMethodExample.java[tag=ord
 
 == LES (EXPRESSIONS) LAMBDAS
 
-image::images/java8-new-lighter.png[background,size=contain]
+image::images/lambda-lighter.png[background,size=contain]
 
 == Comparator 1/2
 
-image::images/java8-new-lighter.png[background,size=contain]
+image::images/lambda-lighter.png[background,size=contain]
 
 .Comparator avec une classe anonyme
 [source,java,indent=0]
@@ -111,7 +111,7 @@ include::../code/src/main/java/java8/lambda/ComparatorExample.java[tag=comparato
 
 == Comparator 2/2
 
-image::images/java8-new-lighter.png[background,size=contain]
+image::images/lambda-lighter.png[background,size=contain]
 
 .Comparator avec une expression lambda
 [source,java,indent=0]
@@ -121,7 +121,7 @@ include::../code/src/main/java/java8/lambda/ComparatorExample.java[tag=comparato
 
 == Runnable 1/2
 
-image::images/java8-new-lighter.png[background,size=contain]
+image::images/lambda-lighter.png[background,size=contain]
 
 .Runnable avec une classe anonyme
 [source,java,indent=0]
@@ -131,7 +131,7 @@ include::../code/src/main/java/java8/lambda/RunnableExample.java[tag=runnableAno
 
 == Runnable 2/2
 
-image::images/java8-new-lighter.png[background,size=contain]
+image::images/lambda-lighter.png[background,size=contain]
 
 .Runnable avec une expression lambda
 [source,java,indent=0]
@@ -141,13 +141,13 @@ include::../code/src/main/java/java8/lambda/RunnableExample.java[tag=runnableLam
 
 == Magie
 
-image::images/java8-new-lighter.png[background,size=contain]
+image::images/lambda-lighter.png[background,size=contain]
 
 Toute *interface* avec *une seule méthode* peut être utilisée comme expression lambda.
 
 == Souvenez-vous: foreach() 2/2
 
-image::images/java8-new-lighter.png[background,size=contain]
+image::images/lambda-lighter.png[background,size=contain]
 
 .Traversal avec la méthode foreach()
 [source,java,indent=0]
@@ -157,7 +157,7 @@ include::../code/src/main/java/java8/foreach/TraversalExample.java[tag=traversal
 
 == Souvenez-vous: foreach() 2/2
 
-image::images/java8-new-lighter.png[background,size=contain]
+image::images/lambda-lighter.png[background,size=contain]
 
 .Traversal avec la méthode foreach()
 [source,java,indent=0]
@@ -168,7 +168,7 @@ Consumer est une *interface* avec *une seule méthode*, une @FunctionalInterface
 
 == foreach() + Lambda
 
-image::images/java8-new-lighter.png[background,size=contain]
+image::images/lambda-lighter.png[background,size=contain]
 
 .Traversal avec la méthode foreach() et une expression Lambda
 [source,java,indent=0]
@@ -178,7 +178,7 @@ include::../code/src/main/java/java8/foreach/TraversalExample.java[tag=traversal
 
 == Exemples d'expressions Lambda 1/2
 
-image::images/java8-new-lighter.png[background,size=contain]
+image::images/lambda-lighter.png[background,size=contain]
 
 [source,java,indent=0]
 ----
@@ -210,7 +210,7 @@ x -> x+1                     // Parenthèses optionnelles pour un argument uniqu
 
 == Exemples d'expressions Lambda 1/2
 
-image::images/java8-new-lighter.png[background,size=contain]
+image::images/lambda-lighter.png[background,size=contain]
 
 [source,java,indent=0]
 ----
@@ -236,11 +236,11 @@ image::images/java8-new-lighter.png[background,size=contain]
 
 == Toujours trop verbeux?
 
-image::images/java8-new-lighter.png[background,size=contain]
+image::images/lambda-lighter.png[background,size=contain]
 
 == Référence de Méthode/Constructeur 1/2
 
-image::images/java8-new-lighter.png[background,size=contain]
+image::images/lambda-lighter.png[background,size=contain]
 
 .Comparator avec des expressions lambda "classiques"
 [source,java,indent=0]
@@ -250,7 +250,7 @@ include::../code/src/main/java/java8/methodref/MethodReferenceExample.java[tag=c
 
 == Référence de Méthode/Constructeur 2/2
 
-image::images/java8-new-lighter.png[background,size=contain]
+image::images/lambda-lighter.png[background,size=contain]
 
 .Comparator avec des références de méthodes
 [source,java,indent=0]
@@ -260,7 +260,7 @@ include::../code/src/main/java/java8/methodref/MethodReferenceExample.java[tag=c
 
 == Exemples de références de méthodes / constructeurs
 
-image::images/java8-new-lighter.png[background,size=contain]
+image::images/lambda-lighter.png[background,size=contain]
 
 [source,java,indent=0]
 ----
@@ -290,11 +290,11 @@ image::images/java8-new-lighter.png[background,size=contain]
 
 == POUR LES STREAMS!!!!!
 
-image::images/java8-new-lighter.png[background,size=contain]
+image::images/stream-lighter.png[background,size=contain]
 
 == java.util.stream 1/2
 
-image::images/java8-new-lighter.png[background,size=contain]
+image::images/stream-lighter.png[background,size=contain]
 
 .Filtrage et somme à l'ancienne avec une boucle
 [source,java,indent=0]
@@ -305,7 +305,7 @@ On filtre les éléments supérieurs à 10 et on les additionne.
 
 == java.util.stream 2/2
 
-image::images/java8-new-lighter.png[background,size=contain]
+image::images/stream-lighter.png[background,size=contain]
 
 .Filtrage et somme à la sauce stream avec stream() filter() et mapTo..()
 [source,java,indent=0]
@@ -316,7 +316,7 @@ On filtre les éléments supérieurs à 10 et on les additionne.
 
 == java.util.stream 2/2
 
-image::images/java8-new-lighter.png[background,size=contain]
+image::images/stream-lighter.png[background,size=contain]
 
 .Filtrage et somme à la sauce stream avec stream() filter() et mapTo..()
 [source,java,indent=0]
@@ -331,4 +331,30 @@ quand sum() est une opération _terminale_, (qui ne renvoie pas de stream)
 [NOTE.speaker]
 --
 sum() est une méthode terminale d'IntStream, pas de Stream<Integer> d'où le besoin de mapToInt().
+--
+
+== Un Stream, et après?
+
+image::images/stream-lighter.png[background,size=contain]
+
+.Passer d'un stream à une collection
+[source,java,indent=0]
+----
+include::../code/src/main/java/java8/streams/FilterExample.java[tag=streamToCollection]
+----
+
+== Traitement parallèle ou séquentiel?
+
+image::images/parallel-lighter.png[background,size=contain]
+
+.indiquer que le traitement *peut* être parallélisé.
+[source,java,indent=0]
+----
+include::../code/src/main/java/java8/streams/FilterExample.java[tag=filterParallelStream]
+----
+
+[NOTE.speaker]
+--
+Un stream créé avec la méthode parallelStream() n'est pas une garantie de parallélisation, mais peut l'induire. Cela signifie surtout que le traitement n'est pas réalisé de manière absolument séquentielle.
+Attention comme dans toute parallélisation, cela met la charge et le blocage sur les méthodes de collectes et d'aggrégation, en relâchat la pression sur les invocations intermédiaires (filter et map par exemple).
 --
